@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB323DE81780F4D700814194 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB323DE71780F4D700814194 /* Foundation.framework */; };
+		FB323DED1780F4D700814194 /* OWActivityViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB323DEC1780F4D700814194 /* OWActivityViewController.h */; };
+		FB323DEF1780F4D700814194 /* OWActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323DEE1780F4D700814194 /* OWActivityViewController.m */; };
+		FB323E1F1780F5C300814194 /* OWActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E051780F5C300814194 /* OWActivity.m */; };
+		FB323E201780F5C300814194 /* OWActivityDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E071780F5C300814194 /* OWActivityDelegateObject.m */; };
+		FB323E211780F5C300814194 /* OWActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E091780F5C300814194 /* OWActivityView.m */; };
+		FB323E221780F5C300814194 /* OWCopyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E0C1780F5C300814194 /* OWCopyActivity.m */; };
+		FB323E231780F5C300814194 /* OWFacebookActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E0E1780F5C300814194 /* OWFacebookActivity.m */; };
+		FB323E241780F5C300814194 /* OWMailActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E101780F5C300814194 /* OWMailActivity.m */; };
+		FB323E251780F5C300814194 /* OWMapsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E121780F5C300814194 /* OWMapsActivity.m */; };
+		FB323E261780F5C300814194 /* OWMessageActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E141780F5C300814194 /* OWMessageActivity.m */; };
+		FB323E271780F5C300814194 /* OWPrintActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E161780F5C300814194 /* OWPrintActivity.m */; };
+		FB323E281780F5C300814194 /* OWSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E181780F5C300814194 /* OWSafariActivity.m */; };
+		FB323E291780F5C300814194 /* OWSaveToCameraRollActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E1A1780F5C300814194 /* OWSaveToCameraRollActivity.m */; };
+		FB323E2A1780F5C300814194 /* OWSinaWeiboActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E1C1780F5C300814194 /* OWSinaWeiboActivity.m */; };
+		FB323E2B1780F5C300814194 /* OWTwitterActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FB323E1E1780F5C300814194 /* OWTwitterActivity.m */; };
+		FB323E2D1780F62D00814194 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB323E2C1780F62D00814194 /* AssetsLibrary.framework */; };
+		FB323E2F1780F63500814194 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB323E2E1780F63500814194 /* MessageUI.framework */; };
+		FB323E311780F63F00814194 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB323E301780F63F00814194 /* Social.framework */; };
+		FB323E331780F64700814194 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB323E321780F64700814194 /* Twitter.framework */; };
+		FB323E351780F65200814194 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB323E341780F65200814194 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB323DE21780F4D700814194 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				FB323DED1780F4D700814194 /* OWActivityViewController.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB323DE41780F4D700814194 /* libOWActivityViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOWActivityViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB323DE71780F4D700814194 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB323DEB1780F4D700814194 /* OWActivityViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OWActivityViewController-Prefix.pch"; sourceTree = "<group>"; };
+		FB323DEC1780F4D700814194 /* OWActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWActivityViewController.h; sourceTree = "<group>"; };
+		FB323DEE1780F4D700814194 /* OWActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWActivityViewController.m; sourceTree = "<group>"; };
+		FB323DFD1780F5C300814194 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
+		FB323DFE1780F5C300814194 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
+		FB323DFF1780F5C300814194 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
+		FB323E001780F5C300814194 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
+		FB323E011780F5C300814194 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
+		FB323E021780F5C300814194 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OWActivityViewController.strings"; sourceTree = "<group>"; };
+		FB323E031780F5C300814194 /* OWActivities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWActivities.h; sourceTree = "<group>"; };
+		FB323E041780F5C300814194 /* OWActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWActivity.h; sourceTree = "<group>"; };
+		FB323E051780F5C300814194 /* OWActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWActivity.m; sourceTree = "<group>"; };
+		FB323E061780F5C300814194 /* OWActivityDelegateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWActivityDelegateObject.h; sourceTree = "<group>"; };
+		FB323E071780F5C300814194 /* OWActivityDelegateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWActivityDelegateObject.m; sourceTree = "<group>"; };
+		FB323E081780F5C300814194 /* OWActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWActivityView.h; sourceTree = "<group>"; };
+		FB323E091780F5C300814194 /* OWActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWActivityView.m; sourceTree = "<group>"; };
+		FB323E0A1780F5C300814194 /* OWActivityViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = OWActivityViewController.bundle; sourceTree = "<group>"; };
+		FB323E0B1780F5C300814194 /* OWCopyActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWCopyActivity.h; sourceTree = "<group>"; };
+		FB323E0C1780F5C300814194 /* OWCopyActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWCopyActivity.m; sourceTree = "<group>"; };
+		FB323E0D1780F5C300814194 /* OWFacebookActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWFacebookActivity.h; sourceTree = "<group>"; };
+		FB323E0E1780F5C300814194 /* OWFacebookActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWFacebookActivity.m; sourceTree = "<group>"; };
+		FB323E0F1780F5C300814194 /* OWMailActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMailActivity.h; sourceTree = "<group>"; };
+		FB323E101780F5C300814194 /* OWMailActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMailActivity.m; sourceTree = "<group>"; };
+		FB323E111780F5C300814194 /* OWMapsActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMapsActivity.h; sourceTree = "<group>"; };
+		FB323E121780F5C300814194 /* OWMapsActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMapsActivity.m; sourceTree = "<group>"; };
+		FB323E131780F5C300814194 /* OWMessageActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMessageActivity.h; sourceTree = "<group>"; };
+		FB323E141780F5C300814194 /* OWMessageActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMessageActivity.m; sourceTree = "<group>"; };
+		FB323E151780F5C300814194 /* OWPrintActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWPrintActivity.h; sourceTree = "<group>"; };
+		FB323E161780F5C300814194 /* OWPrintActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWPrintActivity.m; sourceTree = "<group>"; };
+		FB323E171780F5C300814194 /* OWSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSafariActivity.h; sourceTree = "<group>"; };
+		FB323E181780F5C300814194 /* OWSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSafariActivity.m; sourceTree = "<group>"; };
+		FB323E191780F5C300814194 /* OWSaveToCameraRollActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSaveToCameraRollActivity.h; sourceTree = "<group>"; };
+		FB323E1A1780F5C300814194 /* OWSaveToCameraRollActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSaveToCameraRollActivity.m; sourceTree = "<group>"; };
+		FB323E1B1780F5C300814194 /* OWSinaWeiboActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSinaWeiboActivity.h; sourceTree = "<group>"; };
+		FB323E1C1780F5C300814194 /* OWSinaWeiboActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSinaWeiboActivity.m; sourceTree = "<group>"; };
+		FB323E1D1780F5C300814194 /* OWTwitterActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWTwitterActivity.h; sourceTree = "<group>"; };
+		FB323E1E1780F5C300814194 /* OWTwitterActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWTwitterActivity.m; sourceTree = "<group>"; };
+		FB323E2C1780F62D00814194 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FB323E2E1780F63500814194 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FB323E301780F63F00814194 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FB323E321780F64700814194 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		FB323E341780F65200814194 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB323DE11780F4D700814194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB323E351780F65200814194 /* UIKit.framework in Frameworks */,
+				FB323E331780F64700814194 /* Twitter.framework in Frameworks */,
+				FB323E311780F63F00814194 /* Social.framework in Frameworks */,
+				FB323E2F1780F63500814194 /* MessageUI.framework in Frameworks */,
+				FB323E2D1780F62D00814194 /* AssetsLibrary.framework in Frameworks */,
+				FB323DE81780F4D700814194 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB323DDB1780F4D700814194 = {
+			isa = PBXGroup;
+			children = (
+				FB323E341780F65200814194 /* UIKit.framework */,
+				FB323E321780F64700814194 /* Twitter.framework */,
+				FB323E301780F63F00814194 /* Social.framework */,
+				FB323E2E1780F63500814194 /* MessageUI.framework */,
+				FB323E2C1780F62D00814194 /* AssetsLibrary.framework */,
+				FB323DE91780F4D700814194 /* OWActivityViewController */,
+				FB323DE61780F4D700814194 /* Frameworks */,
+				FB323DE51780F4D700814194 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB323DE51780F4D700814194 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB323DE41780F4D700814194 /* libOWActivityViewController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB323DE61780F4D700814194 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB323DE71780F4D700814194 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB323DE91780F4D700814194 /* OWActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB323DFB1780F5C300814194 /* Localizations */,
+				FB323E031780F5C300814194 /* OWActivities.h */,
+				FB323E041780F5C300814194 /* OWActivity.h */,
+				FB323E051780F5C300814194 /* OWActivity.m */,
+				FB323E061780F5C300814194 /* OWActivityDelegateObject.h */,
+				FB323E071780F5C300814194 /* OWActivityDelegateObject.m */,
+				FB323E081780F5C300814194 /* OWActivityView.h */,
+				FB323E091780F5C300814194 /* OWActivityView.m */,
+				FB323E0A1780F5C300814194 /* OWActivityViewController.bundle */,
+				FB323E0B1780F5C300814194 /* OWCopyActivity.h */,
+				FB323E0C1780F5C300814194 /* OWCopyActivity.m */,
+				FB323E0D1780F5C300814194 /* OWFacebookActivity.h */,
+				FB323E0E1780F5C300814194 /* OWFacebookActivity.m */,
+				FB323E0F1780F5C300814194 /* OWMailActivity.h */,
+				FB323E101780F5C300814194 /* OWMailActivity.m */,
+				FB323E111780F5C300814194 /* OWMapsActivity.h */,
+				FB323E121780F5C300814194 /* OWMapsActivity.m */,
+				FB323E131780F5C300814194 /* OWMessageActivity.h */,
+				FB323E141780F5C300814194 /* OWMessageActivity.m */,
+				FB323E151780F5C300814194 /* OWPrintActivity.h */,
+				FB323E161780F5C300814194 /* OWPrintActivity.m */,
+				FB323E171780F5C300814194 /* OWSafariActivity.h */,
+				FB323E181780F5C300814194 /* OWSafariActivity.m */,
+				FB323E191780F5C300814194 /* OWSaveToCameraRollActivity.h */,
+				FB323E1A1780F5C300814194 /* OWSaveToCameraRollActivity.m */,
+				FB323E1B1780F5C300814194 /* OWSinaWeiboActivity.h */,
+				FB323E1C1780F5C300814194 /* OWSinaWeiboActivity.m */,
+				FB323E1D1780F5C300814194 /* OWTwitterActivity.h */,
+				FB323E1E1780F5C300814194 /* OWTwitterActivity.m */,
+				FB323DEC1780F4D700814194 /* OWActivityViewController.h */,
+				FB323DEE1780F4D700814194 /* OWActivityViewController.m */,
+				FB323DEA1780F4D700814194 /* Supporting Files */,
+			);
+			path = OWActivityViewController;
+			sourceTree = "<group>";
+		};
+		FB323DEA1780F4D700814194 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB323DEB1780F4D700814194 /* OWActivityViewController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB323DFB1780F5C300814194 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				FB323DFC1780F5C300814194 /* OWActivityViewController.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB323DE31780F4D700814194 /* OWActivityViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB323DF21780F4D700814194 /* Build configuration list for PBXNativeTarget "OWActivityViewController" */;
+			buildPhases = (
+				FB323DE01780F4D700814194 /* Sources */,
+				FB323DE11780F4D700814194 /* Frameworks */,
+				FB323DE21780F4D700814194 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OWActivityViewController;
+			productName = OWActivityViewController;
+			productReference = FB323DE41780F4D700814194 /* libOWActivityViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB323DDC1780F4D700814194 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = roby;
+			};
+			buildConfigurationList = FB323DDF1780F4D700814194 /* Build configuration list for PBXProject "OWActivityViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				fr,
+				ru,
+				sv,
+				"zh-Hans",
+			);
+			mainGroup = FB323DDB1780F4D700814194;
+			productRefGroup = FB323DE51780F4D700814194 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB323DE31780F4D700814194 /* OWActivityViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB323DE01780F4D700814194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB323DEF1780F4D700814194 /* OWActivityViewController.m in Sources */,
+				FB323E1F1780F5C300814194 /* OWActivity.m in Sources */,
+				FB323E201780F5C300814194 /* OWActivityDelegateObject.m in Sources */,
+				FB323E211780F5C300814194 /* OWActivityView.m in Sources */,
+				FB323E221780F5C300814194 /* OWCopyActivity.m in Sources */,
+				FB323E231780F5C300814194 /* OWFacebookActivity.m in Sources */,
+				FB323E241780F5C300814194 /* OWMailActivity.m in Sources */,
+				FB323E251780F5C300814194 /* OWMapsActivity.m in Sources */,
+				FB323E261780F5C300814194 /* OWMessageActivity.m in Sources */,
+				FB323E271780F5C300814194 /* OWPrintActivity.m in Sources */,
+				FB323E281780F5C300814194 /* OWSafariActivity.m in Sources */,
+				FB323E291780F5C300814194 /* OWSaveToCameraRollActivity.m in Sources */,
+				FB323E2A1780F5C300814194 /* OWSinaWeiboActivity.m in Sources */,
+				FB323E2B1780F5C300814194 /* OWTwitterActivity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB323DFC1780F5C300814194 /* OWActivityViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB323DFD1780F5C300814194 /* de */,
+				FB323DFE1780F5C300814194 /* en */,
+				FB323DFF1780F5C300814194 /* fr */,
+				FB323E001780F5C300814194 /* ru */,
+				FB323E011780F5C300814194 /* sv */,
+				FB323E021780F5C300814194 /* zh-Hans */,
+			);
+			name = OWActivityViewController.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB323DF01780F4D700814194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB323DF11780F4D700814194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB323DF31780F4D700814194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OWActivityViewController.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OWActivityViewController/OWActivityViewController-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FB323DF41780F4D700814194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OWActivityViewController.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OWActivityViewController/OWActivityViewController-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB323DDF1780F4D700814194 /* Build configuration list for PBXProject "OWActivityViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB323DF01780F4D700814194 /* Debug */,
+				FB323DF11780F4D700814194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB323DF21780F4D700814194 /* Build configuration list for PBXNativeTarget "OWActivityViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB323DF31780F4D700814194 /* Debug */,
+				FB323DF41780F4D700814194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB323DDC1780F4D700814194 /* Project object */;
+}
