@@ -26,6 +26,8 @@
 #import "OWTwitterActivity.h"
 #import "OWActivityViewController.h"
 #import <Twitter/Twitter.h>
+#import <Social/Social.h>
+
 
 @implementation OWTwitterActivity
 
@@ -45,9 +47,9 @@
         
         [activityViewController dismissViewControllerAnimated:YES completion:^{
             [weakSelf shareFromViewController:presenter
-                                           text:[userInfo objectForKey:@"text"]
-                                            url:[userInfo objectForKey:@"url"]
-                                          image:[userInfo objectForKey:@"image"]];
+										 text:[userInfo objectForKey:@"text"]
+										  url:[userInfo objectForKey:@"url"]
+										image:[userInfo objectForKey:@"image"]];
             
         }];
     };
@@ -58,30 +60,49 @@
 
 - (void)shareFromViewController:(UIViewController *)viewController text:(NSString *)text url:(NSURL *)url image:(UIImage *)image
 {
-    id twitterViewComposer = nil;
     
     if( NSClassFromString (@"UIActivityViewController") ) {
-            // ios 6
-            twitterViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+		// ios 6
+		SLComposeViewController* twitterViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         if (!twitterViewComposer) {
             return;
         }
+		[twitterViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
+			self.completionHandler(UIActivityTypePostToTwitter,(BOOL)result);
+		}];
+		
+		if (twitterViewComposer) {
+			viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+			if (text)
+				[twitterViewComposer setInitialText:text];
+			if (image)
+				[twitterViewComposer addImage:image];
+			if (url)
+				[twitterViewComposer addURL:url];
+			
+			[viewController presentViewController:twitterViewComposer animated:YES completion:nil];
+		}
+		
     } else {
         // ios 5
-        twitterViewComposer = [[TWTweetComposeViewController alloc] init];
+        TWTweetComposeViewController* twitterViewComposer = [[TWTweetComposeViewController alloc] init];
+		[twitterViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
+			self.completionHandler(UIActivityTypePostToTwitter,(BOOL)result);
+		}];
+		if (twitterViewComposer) {
+			viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+			if (text)
+				[twitterViewComposer setInitialText:text];
+			if (image)
+				[twitterViewComposer addImage:image];
+			if (url)
+				[twitterViewComposer addURL:url];
+			
+			[viewController presentViewController:twitterViewComposer animated:YES completion:nil];
+		}
     }
     
-    if (twitterViewComposer) {
-        viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-        if (text)
-            [twitterViewComposer setInitialText:text];
-        if (image)
-            [twitterViewComposer addImage:image];
-        if (url)
-            [twitterViewComposer addURL:url];
-        
-        [viewController presentViewController:twitterViewComposer animated:YES completion:nil];
-    }
+	
 }
 
 @end

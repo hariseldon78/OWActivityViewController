@@ -29,6 +29,9 @@
 @class OWActivityViewController;
 @class OWActivity;
 
+typedef void (^OWActivityActionCompletionHandler)(NSString *activityType, BOOL completed);
+
+
 typedef void (^OWActivityActionBlock)(OWActivity *activity, OWActivityViewController *activityViewController);
 
 @interface OWActivity : NSObject
@@ -38,6 +41,8 @@ typedef void (^OWActivityActionBlock)(OWActivity *activity, OWActivityViewContro
 @property (copy, nonatomic) OWActivityActionBlock actionBlock;
 @property (strong, nonatomic) OWActivityViewController *activityViewController;
 @property (strong, nonatomic) NSDictionary *userInfo;
+
+@property (strong) OWActivityActionCompletionHandler completionHandler;
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image actionBlock:(OWActivityActionBlock)actionBlock;
 

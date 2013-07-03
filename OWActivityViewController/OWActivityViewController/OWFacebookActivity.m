@@ -26,6 +26,7 @@
 #import "OWFacebookActivity.h"
 #import "OWActivityViewController.h"
 
+
 @implementation OWFacebookActivity
 
 - (id)init
@@ -59,6 +60,11 @@
         return;
     }
     
+	[facebookViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
+		self.completionHandler(UIActivityTypePostToFacebook,(BOOL)result);
+	}];
+
+	
     viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
     if (text)
         [facebookViewComposer setInitialText:text];

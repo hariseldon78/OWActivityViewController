@@ -26,6 +26,7 @@
 #import "OWSinaWeiboActivity.h"
 #import "OWActivityViewController.h"
 
+
 @implementation OWSinaWeiboActivity
 
 - (id)init
@@ -42,9 +43,9 @@
         NSDictionary *userInfo = weakSelf.userInfo ? weakSelf.userInfo : activityViewController.userInfo;
         [activityViewController dismissViewControllerAnimated:YES completion:^{
             [weakSelf shareFromViewController:presenter
-                                     text:[userInfo objectForKey:@"text"]
-                                      url:[userInfo objectForKey:@"url"]
-                                    image:[userInfo objectForKey:@"image"]];
+										 text:[userInfo objectForKey:@"text"]
+										  url:[userInfo objectForKey:@"url"]
+										image:[userInfo objectForKey:@"image"]];
         }];
     };
     
@@ -53,21 +54,28 @@
 
 - (void)shareFromViewController:(UIViewController *)viewController text:(NSString *)text url:(NSURL *)url image:(UIImage *)image
 {
-        SLComposeViewController *sinaWeiboViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
-        
-        if (!sinaWeiboViewComposer) {
-            return;
-        }
-        
-        viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-        if (text)
-            [sinaWeiboViewComposer setInitialText:text];
-        if (image)
-            [sinaWeiboViewComposer addImage:image];
-        if (url)
-            [sinaWeiboViewComposer addURL:url];
-        
-        [viewController presentViewController:sinaWeiboViewComposer animated:YES completion:nil];
+	SLComposeViewController *sinaWeiboViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
+	
+	if (!sinaWeiboViewComposer) {
+		return;
+	}
+	
+	[sinaWeiboViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
+		self.completionHandler(UIActivityTypePostToWeibo,(BOOL)result);
+	}];
+/*	[sinaWeiboViewComposer setCompletionHandler:{
+		self.completionHandler(UIActivityTypePostToWeibo,(BOOL)result);
+	}];*/
+	
+	viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+	if (text)
+		[sinaWeiboViewComposer setInitialText:text];
+	if (image)
+		[sinaWeiboViewComposer addImage:image];
+	if (url)
+		[sinaWeiboViewComposer addURL:url];
+	
+	[viewController presentViewController:sinaWeiboViewComposer animated:YES completion:nil];
 }
 
 @end
