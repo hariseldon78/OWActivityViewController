@@ -25,6 +25,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 
 @class OWActivityViewController;
 @class OWActivity;
@@ -42,8 +43,8 @@ typedef void (^OWActivityActionBlock)(OWActivity *activity, OWActivityViewContro
 @property (strong, nonatomic) OWActivityViewController *activityViewController;
 @property (strong, nonatomic) NSDictionary *userInfo;
 
-@property (strong) OWActivityActionCompletionHandler completionHandler;
+@property (strong) OWActivityActionCompletionHandler activityCompletionHandler;
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image actionBlock:(OWActivityActionBlock)actionBlock;
-
+-(void)setCompletionHandlerAdapterWithComposer:(SLComposeViewController*)composer type:(NSString*)activityType;
 @end

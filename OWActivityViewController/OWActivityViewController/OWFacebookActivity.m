@@ -60,9 +60,8 @@
         return;
     }
     
-	[facebookViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
-		self.completionHandler(UIActivityTypePostToFacebook,(BOOL)result);
-	}];
+	 	[self setCompletionHandlerAdapterWithComposer:facebookViewComposer type:UIActivityTypePostToFacebook];
+
 
 	
     viewController.modalPresentationStyle = UIModalPresentationCurrentContext;

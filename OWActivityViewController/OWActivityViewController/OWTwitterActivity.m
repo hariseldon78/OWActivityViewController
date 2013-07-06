@@ -40,7 +40,7 @@
     if (!self)
         return nil;
     
-    __typeof(&*self) __weak weakSelf = self;
+	OWTwitterActivity* __weak weakSelf = self;
     self.actionBlock = ^(OWActivity *activity, OWActivityViewController *activityViewController) {
         UIViewController *presenter = activityViewController.presentingController;
         NSDictionary *userInfo = weakSelf.userInfo ? weakSelf.userInfo : activityViewController.userInfo;
@@ -57,52 +57,60 @@
     return self;
 }
 
-
-- (void)shareFromViewController:(UIViewController *)viewController text:(NSString *)text url:(NSURL *)url image:(UIImage *)image
+-(void)shareFromViewController:(UIViewController*)viewController text:(NSString*)text url:(NSURL*)url image:(UIImage*)image
 {
+	if(! NSClassFromString (@"UIActivityViewController") ) {
+		@throw [NSException exceptionWithName:@"twitter not supported for iOs<6.0" reason:@"twitter not supported for iOs<6.0" userInfo:nil];
+	}
+	SLComposeViewController *twitterViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+
+	if (!twitterViewComposer) return;
+	[self setCompletionHandlerAdapterWithComposer:twitterViewComposer type:UIActivityTypePostToTwitter];
+	
+	
+    viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    if (text)
+        [twitterViewComposer setInitialText:text];
+    if (image)
+        [twitterViewComposer addImage:image];
+    if (url)
+        [twitterViewComposer addURL:url];
     
-    if( NSClassFromString (@"UIActivityViewController") ) {
-		// ios 6
-		SLComposeViewController* twitterViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        if (!twitterViewComposer) {
-            return;
-        }
-		[twitterViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
-			self.completionHandler(UIActivityTypePostToTwitter,(BOOL)result);
-		}];
-		
-		if (twitterViewComposer) {
-			viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-			if (text)
-				[twitterViewComposer setInitialText:text];
-			if (image)
-				[twitterViewComposer addImage:image];
-			if (url)
-				[twitterViewComposer addURL:url];
-			
-			[viewController presentViewController:twitterViewComposer animated:YES completion:nil];
-		}
-		
-    } else {
-        // ios 5
-        TWTweetComposeViewController* twitterViewComposer = [[TWTweetComposeViewController alloc] init];
-		[twitterViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
-			self.completionHandler(UIActivityTypePostToTwitter,(BOOL)result);
-		}];
-		if (twitterViewComposer) {
-			viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
-			if (text)
-				[twitterViewComposer setInitialText:text];
-			if (image)
-				[twitterViewComposer addImage:image];
-			if (url)
-				[twitterViewComposer addURL:url];
-			
-			[viewController presentViewController:twitterViewComposer animated:YES completion:nil];
-		}
-    }
-    
+    [viewController presentViewController:twitterViewComposer animated:YES completion:nil];
+	
 	
 }
 
+//- (void)shareFromViewController:(UIViewController *)viewController text:(NSString *)text url:(NSURL *)url image:(UIImage *)image
+//{
+//    id twitterViewComposer = nil;
+//    
+//    if( NSClassFromString (@"UIActivityViewController") ) {
+//		// ios 6
+//		twitterViewComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+//        if (!twitterViewComposer) {
+//            return;
+//        }
+//		
+//    } else {
+//        // ios 5
+//        twitterViewComposer = [[TWTweetComposeViewController alloc] init];
+//	}
+//	
+//	[twitterViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
+//		self.activityCompletionHandler(UIActivityTypePostToTwitter,(BOOL)result);
+//	}];
+//	
+//	if (twitterViewComposer) {
+//		viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+//		if (text)
+//			[twitterViewComposer setInitialText:text];
+//		if (image)
+//			[twitterViewComposer addImage:image];
+//		if (url)
+//			[twitterViewComposer addURL:url];
+//		
+//		[viewController presentViewController:twitterViewComposer animated:YES completion:nil];
+//	}
+//}
 @end

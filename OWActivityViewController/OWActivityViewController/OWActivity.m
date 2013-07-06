@@ -24,7 +24,6 @@
 //
 
 #import "OWActivity.h"
-
 @implementation OWActivity
 
 - (id)initWithTitle:(NSString *)title image:(UIImage *)image actionBlock:(OWActivityActionBlock)actionBlock
@@ -36,6 +35,17 @@
         _actionBlock = [actionBlock copy];
     }
     return self;
+}
+
+-(void)setCompletionHandlerAdapterWithComposer:(SLComposeViewController*)composer type:(NSString*)activityType
+{
+	SLComposeViewController* __weak vc=composer;
+	[composer setCompletionHandler:^(SLComposeViewControllerResult result){
+		NSLog(@"calling external block");
+		[vc dismissViewControllerAnimated:YES completion:^{
+			self.activityCompletionHandler(activityType,(BOOL)result);
+		}];
+	}];
 }
 
 @end

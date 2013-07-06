@@ -60,12 +60,7 @@
 		return;
 	}
 	
-	[sinaWeiboViewComposer setCompletionHandler:^(SLComposeViewControllerResult result){
-		self.completionHandler(UIActivityTypePostToWeibo,(BOOL)result);
-	}];
-/*	[sinaWeiboViewComposer setCompletionHandler:{
-		self.completionHandler(UIActivityTypePostToWeibo,(BOOL)result);
-	}];*/
+ 	[self setCompletionHandlerAdapterWithComposer:sinaWeiboViewComposer type:UIActivityTypePostToWeibo];
 	
 	viewController.modalPresentationStyle = UIModalPresentationCurrentContext;
 	if (text)
