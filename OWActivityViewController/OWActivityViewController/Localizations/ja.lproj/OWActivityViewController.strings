@@ -1,0 +1,50 @@
+/*
+ OWActivityViewController.strings
+ Created by Benoit Pereira da Silva on 02/13/13.
+ http://www.pereira-da-silva.com
+*/
+
+/////////////////////
+// ACTIVITIES
+/////////////////////
+
+/* Mail */
+"activity.Mail.title"="郵便";
+
+/* Copy */
+"activity.Copy.title"="写し";
+
+/* Facebook */
+"activity.Facebook.title"="Facebook";
+
+/* Sina Weibo */
+"activity.SinaWeibo.title"="Sina Weibo";
+
+/* Open in Maps */
+"activity.Maps.title"="マップで開く";
+
+/* Message */
+"activity.Message.title"="メッセージ";
+
+/* Print */
+"activity.Print.title"="印刷";
+"activity.Print.error.title"="誤差";
+"activity.Print.error.message"="印刷中にエラーが発生しました: %@";
+
+/* Open in Safari */
+"activity.Safari.title"="Safariで開く";
+
+/* Save to Camera Roll */
+"activity.CameraRoll.title"="カメラロールに保存する";
+
+/* Twitter */
+"activity.Twitter.title"="Twitter";
+
+/////////////////////
+// GENERIC
+/////////////////////
+
+/* Buttons */
+"button.cancel"="取り消す";
+"button.dismiss"="Ok";
+"button.login"="ログイン";

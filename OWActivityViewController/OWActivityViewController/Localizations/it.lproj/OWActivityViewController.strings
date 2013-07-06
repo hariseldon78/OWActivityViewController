@@ -1,0 +1,50 @@
+/*
+ OWActivityViewController.strings
+ Created by Benoit Pereira da Silva on 02/13/13.
+ http://www.pereira-da-silva.com
+*/
+
+/////////////////////
+// ACTIVITIES
+/////////////////////
+
+/* Mail */
+"activity.Mail.title"="Mail";
+
+/* Copy */
+"activity.Copy.title"="Copy";
+
+/* Facebook */
+"activity.Facebook.title"="Facebook";
+
+/* Sina Weibo */
+"activity.SinaWeibo.title"="Sina Weibo";
+
+/* Open in Maps */
+"activity.Maps.title"="Apri in Maps";
+
+/* Message */
+"activity.Message.title"="Messaggio";
+
+/* Print */
+"activity.Print.title"="Stampa";
+"activity.Print.error.title"="Errore.";
+"activity.Print.error.message"="Si è verificato un errore durante la stampa: %@";
+
+/* Open in Safari */
+"activity.Safari.title"="Apri in Safari";
+
+/* Save to Camera Roll */
+"activity.CameraRoll.title"="Salva nel rullino";
+
+/* Twitter */
+"activity.Twitter.title"="Twitter";
+
+/////////////////////
+// GENERIC
+/////////////////////
+
+/* Buttons */
+"button.cancel"="Annulla";
+"button.dismiss"="Chiudi";
+"button.login"="Log In";

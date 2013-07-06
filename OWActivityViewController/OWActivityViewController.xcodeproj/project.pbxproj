@@ -44,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB2DEECB1788B56E001A75D2 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
+		FB2DEECC1788B595001A75D2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/OWActivityViewController.strings; sourceTree = "<group>"; };
 		FB323DE41780F4D700814194 /* libOWActivityViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOWActivityViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB323DE71780F4D700814194 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB323DEB1780F4D700814194 /* OWActivityViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OWActivityViewController-Prefix.pch"; sourceTree = "<group>"; };
@@ -232,6 +234,8 @@
 				ru,
 				sv,
 				"zh-Hans",
+				it,
+				ja,
 			);
 			mainGroup = FB323DDB1780F4D700814194;
 			productRefGroup = FB323DE51780F4D700814194 /* Products */;
@@ -277,6 +281,8 @@
 				FB323E001780F5C300814194 /* ru */,
 				FB323E011780F5C300814194 /* sv */,
 				FB323E021780F5C300814194 /* zh-Hans */,
+				FB2DEECB1788B56E001A75D2 /* it */,
+				FB2DEECC1788B595001A75D2 /* ja */,
 			);
 			name = OWActivityViewController.strings;
 			sourceTree = "<group>";
