@@ -36,6 +36,7 @@
 
 - (void)loadView
 {
+	NSLog(@"loadView");
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
         self.view = [[UIView alloc] initWithFrame:rootViewController.view.bounds];
@@ -47,6 +48,7 @@
 
 - (id)initWithViewController:(UIViewController *)viewController activities:(NSArray *)activities
 {
+	NSLog(@"initWithViewController:");
     self = [super init];
     if (self) {
         self.presentingController = viewController;
@@ -78,6 +80,8 @@
 
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion
 {
+	NSLog(@"dismissViewControllerAnimated");
+
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         __typeof (&*self) __weak weakSelf = self;
         [UIView animateWithDuration:0.4 animations:^{
@@ -102,6 +106,8 @@
 
 - (void)presentFromRootViewController
 {
+	NSLog(@"presentFromRootViewController");
+
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
     [rootViewController addChildViewController:self];
     [rootViewController.view addSubview:self.view];
@@ -110,6 +116,8 @@
 
 - (void)didMoveToParentViewController:(UIViewController *)parent
 {
+	NSLog(@"didMoveToParentViewControllwer");
+
     [super didMoveToParentViewController:parent];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         [UIView animateWithDuration:0.4 animations:^{
@@ -131,6 +139,8 @@
 
 - (void)viewDidLoad
 {
+	NSLog(@"viewDidLoad");
+
     [super viewDidLoad];
 }
 

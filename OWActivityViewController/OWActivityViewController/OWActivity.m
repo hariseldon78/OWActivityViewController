@@ -40,10 +40,23 @@
 -(void)setCompletionHandlerAdapterWithComposer:(SLComposeViewController*)composer type:(NSString*)activityType
 {
 	SLComposeViewController* __weak vc=composer;
+	OWActivityActionCompletionHandler __weak complHand=self.activityCompletionHandler;
 	[composer setCompletionHandler:^(SLComposeViewControllerResult result){
 		NSLog(@"calling external block");
-		[vc dismissViewControllerAnimated:YES completion:^{
-			self.activityCompletionHandler(activityType,(BOOL)result);
+		[[NSOperationQueue mainQueue]addOperationWithBlock:^{
+			NSLog(@"%@",vc);
+			if (vc)
+			{
+				[vc dismissViewControllerAnimated:YES completion:^{
+					NSLog(@"handling completion");
+					complHand(activityType,(BOOL)result);
+				}];
+			}
+			else
+			{
+				complHand(activityType,(BOOL)result);
+			}
+				
 		}];
 	}];
 }

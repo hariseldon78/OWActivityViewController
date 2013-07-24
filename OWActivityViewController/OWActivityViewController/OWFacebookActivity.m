@@ -60,7 +60,7 @@
         return;
     }
     
-	 	[self setCompletionHandlerAdapterWithComposer:facebookViewComposer type:UIActivityTypePostToFacebook];
+	[self setCompletionHandlerAdapterWithComposer:facebookViewComposer type:UIActivityTypePostToFacebook];
 
 
 	
